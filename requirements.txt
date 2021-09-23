@@ -1,0 +1,6 @@
+Django
+djangorestframework
+requests
+black
+psycopg2
+coverage
