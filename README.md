@@ -47,16 +47,16 @@ python 3.7 or higher
 
 
 # Setup environment:
-##1. Create a virtual environment
+## 1. Create a virtual environment
 
   - `python3 -m venv <path>`
 
-##2. Activate virtual environment
+## 2. Activate virtual environment
 
   - `source <path_to_virtual_environment>/bin/activate`
 
-##3. Install requirements. Use the package manager pip to install the dependencies. 
-pip install -r requirements.txt
+## 3. Install requirements. Use the package manager pip to install the dependencies. 
+`pip3 install -r requirements.txt`
 
 
 ## NOTE: Running the migrations will try to create tables in the `default` database.
@@ -70,16 +70,16 @@ pip install -r requirements.txt
 
   * Alternatively, you can use the sqlite database by changing the DATABASES dictionary in settings.py.
 
-##4. Run migrations
+## 4. Run migrations
 
-`python manage.py makemigrations`
+`python3 manage.py makemigrations`
 
-python manage.py migrate
+`python3 manage.py migrate`
 
-##5. Run Project
+## 5. Run Project
 Open terminal and run the following commands:
 
-python manage.py runserver
+`python3 manage.py runserver`
 
 ---
 ## Run Tests
@@ -91,17 +91,23 @@ python manage.py runserver
 
 * To check the coverage report:
   * `coverage report`
+  
+---
+# API 
 
-----
+### Command to populate package
+
+`python3 manage.py populate_package`
+
+### Curl for Search API
+
+`curl --location --request GET 'localhost:8000/api/v1/package/search/?name=a'`
+
+---
 # Request Flow
 
 Please check [this diagram](request_flow.jpg) for the expected request flow from an architectural perspective.
 
-
----
-# Curl for API
-
-`curl --location --request GET 'localhost:8000/api/v1/package/search/?name=a'`
 
 ---
 # Further Enhancements

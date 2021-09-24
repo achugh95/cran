@@ -23,7 +23,7 @@ class Command(BaseCommand):
         A command to populate the package information from the external end-points.
         """
         logging.info("Populating the package table...")
-        Command.populate_package(package_count=100)
+        Command.populate_package(package_count=50)
         logging.info("Done!")
 
     @staticmethod
